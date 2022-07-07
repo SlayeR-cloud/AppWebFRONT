@@ -1,0 +1,25 @@
+const API_BASE_URL_DEVELOPMENT = 'http://localhost:5176/api/Product';
+
+const ENDPOINTS = {
+    GET_ALL_PRODUCTS: 'List',
+    GET_PRODUCT_ID: 'GetProduct',
+    CREATE_PRODUCT: 'Save',
+    UPDATE_PRODUCT: 'Update',
+    DELETE_PRODUCT: 'Delete'
+}
+
+const development = {
+    API_URL_GET_ALL_PRODUCTS: `${API_BASE_URL_DEVELOPMENT}/${ENDPOINTS.GET_ALL_PRODUCTS}`,
+    API_URL_GET_A_PRODUCT: `${API_BASE_URL_DEVELOPMENT}/${ENDPOINTS.GET_PRODUCT_ID}`,
+    API_URL_CREATE_PRODUCT: `${API_BASE_URL_DEVELOPMENT}/${ENDPOINTS.CREATE_PRODUCT}`,
+    API_URL_UPDATE_PRODUCT: `${API_BASE_URL_DEVELOPMENT}/${ENDPOINTS.UPDATE_PRODUCT}`,
+    API_URL_DELETE_A_PRODUCT: `${API_BASE_URL_DEVELOPMENT}/${ENDPOINTS.DELETE_PRODUCT}`,
+}
+
+const production = {
+
+}
+
+const Constants = process.env.NODE_ENV === 'development' ? development : production;
+
+export default Constants;
